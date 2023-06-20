@@ -16,9 +16,9 @@ pipeline {
 
          stage('push Image') {
             steps {
-                	withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'hub-password', usernameVariable: 'hub-username')]) {
-		     sh "docker login -u ${hub-username} -p ${hub-password}"
-			}
+                	
+		     bat "docker login -u palani160385 -p Dell!@#00"
+			
             }
         }
       
