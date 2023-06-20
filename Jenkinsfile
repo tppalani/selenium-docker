@@ -10,7 +10,7 @@ pipeline {
 
        stage('Build Image') {
             steps {
-                	bat "docker build -t palani160385/selenium-docker ."
+                	bat "podman build -t palani160385/selenium-docker ."
             }
         }
 }
