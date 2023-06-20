@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Environment Variables
-# HUB_HOST
+HUB_HOST=localhost
 # BROWSER
 # MODULE
 
