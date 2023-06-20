@@ -18,6 +18,7 @@ pipeline {
             steps {
                 	
 		     bat "docker login -u palani160385 -p Dell!@#00"
+		      bat "docker push palani160385/selenium-docker"
 			
             }
         }
