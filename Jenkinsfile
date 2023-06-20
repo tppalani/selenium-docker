@@ -16,9 +16,10 @@ pipeline {
 
        stage('push Image') {
             steps {
-                	withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'docker-hub-password', usernameVariable: 'docker-hub-username')]) 
+                	withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'docker-hub-password', usernameVariable: 'docker-hub-username')]) {
                          docker push  palani160385/selenium-docker
             }
+	    }
         }
 }
 }
