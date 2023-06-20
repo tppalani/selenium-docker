@@ -1,10 +1,10 @@
 pipeline {
     agent none
-   
+     stages {
             steps {
                 sh 'mvn clean package -DskipTests'
             }
-
+     }
         stage('Build Image') {
             steps {
                 script {
