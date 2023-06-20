@@ -5,7 +5,7 @@ pipeline {
         stage('Build'){
             steps {
                 bat "C:/maven/bin/mvn clean package -DskipTests"
-		args '-v $HOME/.m2:/root/.m2'
+	
             }
         }
 
