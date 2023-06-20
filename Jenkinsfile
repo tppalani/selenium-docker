@@ -28,6 +28,12 @@ pipeline {
                 bat "docker pull palani160385/selenium-docker:latest"
             }
         }
+
+	stage("Start Grid"){
+			steps{
+				bat "docker-compose up -d hub chrome firefox"
+			}
+		}
       
 
 }
