@@ -10,7 +10,7 @@ pipeline {
 
        stage('Build Image') {
             steps {
-                	app = docker.build("palani160385/selenium-docker")
+                	bat "docker build -t palani160385/selenium-docker ."
             }
         }
 }
