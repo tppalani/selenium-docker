@@ -5,6 +5,7 @@ pipeline {
         stage('Build'){
             steps {
                 bat "C:/maven/bin/mvn clean package -DskipTests"
+		args '-v $HOME/.m2:/root/.m2'
             }
         }
 
@@ -32,6 +33,12 @@ pipeline {
 	stage("Start Grid"){
 			steps{
 				bat "docker-compose up -d hub chrome firefox"
+			}
+		}
+
+       stage("Run Test"){
+			steps{
+				bat "docker-compose up search-module book-flight-module"
 			}
 		}
       
