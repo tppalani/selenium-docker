@@ -10,7 +10,7 @@ pipeline {
 
        stage('Build Image') {
             steps {
-                	bat `C:/Program Files/Docker/Docker/docker build -t palani160385/selenium-docker .`
+                	bat 'C:/Program Files/Docker/Docker/docker build -t palani160385/selenium-docker .'
             }
         }
 }
