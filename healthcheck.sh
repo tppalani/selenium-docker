@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Environment Variables
-HUB_HOST=localhost
+# HUB_HOST
 # BROWSER
 # MODULE
 
@@ -15,7 +15,4 @@ done
 java -cp selenium-docker.jar:selenium-docker-tests.jar:libs/* \
     -DHUB_HOST=$HUB_HOST \
     -DBROWSER=$BROWSER \
-    io.cucumber.core.cli.Main \
-    classpath:features \
-    --tags $TAGS \
-	  --glue com.test.stepdefs
+    org.testng.TestNG $MODULE
