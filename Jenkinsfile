@@ -14,6 +14,11 @@ pipeline {
             }
         }
 
+         stage('push Image') {
+            steps {
+                	bat "docker push -t palani160385/selenium-docker"
+            }
+        }
       
 
 }
