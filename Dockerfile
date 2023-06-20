@@ -1,4 +1,5 @@
-FROM openjdk:8u191-jre-alpine3.8
+# updated image for java 17
+FROM bellsoft/liberica-openjdk-alpine:17.0.6
 
 RUN apk add curl jq
 
@@ -17,3 +18,12 @@ ADD target/libs							libs
 # ADD suite files
 ADD book-flight-module.xml				book-flight-module.xml
 ADD search-module.xml					search-module.xml
+
+# ADD health check script
+ADD healthcheck.sh                      healthcheck.sh
+
+# BROWSER
+# HUB_HOST
+# MODULE
+
+ENTRYPOINT sh healthcheck.sh
