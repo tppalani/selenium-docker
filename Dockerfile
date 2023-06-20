@@ -20,10 +20,13 @@ ADD book-flight-module.xml				book-flight-module.xml
 ADD search-module.xml					search-module.xml
 
 # ADD health check script
-ADD healthcheck.sh                      healthcheck.sh
+ADD healthcheck.sh      healthcheck.sh
+RUN dos2unix healthcheck.sh
 
 # BROWSER
 # HUB_HOST
 # MODULE
+
+
 
 ENTRYPOINT sh healthcheck.sh
