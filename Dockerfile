@@ -4,7 +4,7 @@ FROM bellsoft/liberica-openjdk-alpine:17.0.6
 RUN apk add curl jq
 
 # Workspace
-WORKDIR /usr/share/udemy
+WORKDIR /usr/share/selenium
 
 # ADD .jar under target from host
 # into this image
