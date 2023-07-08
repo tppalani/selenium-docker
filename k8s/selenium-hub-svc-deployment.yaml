@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: selenium-hub
-  namespace: devops-docker-sidecar
+  namespace:devops-java-selenium
   labels:
     name: selenium-hub
 spec:
@@ -23,7 +23,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: selenium-hub-deployment
-  namespace: devops-docker-sidecar
+  namespace: devops-java-selenium
   labels:
     app: selenium-hub
     name: selenium-hub
