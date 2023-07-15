@@ -11,6 +11,8 @@ pipeline {
 
        stage('Build Image') {
             steps {
+		        bat "podman machine init"
+		        bat "podman machine start"
                 	bat "podman build -t palani160385/selenium-docker ."
             }
         }
